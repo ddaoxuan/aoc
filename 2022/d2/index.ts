@@ -1,7 +1,7 @@
 import * as fs from 'fs'
 import * as path from 'path'
 
-const file = path.resolve('./d2/input.txt');
+const file = path.resolve('./2022/d2/input.txt');
 
 
 type Shape = 'Rock' | 'Paper' | 'Scissors'
