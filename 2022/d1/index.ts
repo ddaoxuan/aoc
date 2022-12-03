@@ -1,7 +1,7 @@
 import * as fs from 'fs'
 import * as path from 'path'
 
-const file = path.resolve('./d1/input.txt')
+const file = path.resolve('./2022/d1/input.txt')
 
 const elvesDictionary: { [key: string]: number[] } = {}
 const elvesMap: { [key: string]: number } = {}
