@@ -1,5 +1,5 @@
-# Advent Of Code
+# [AOC](https://adventofcode.com/)
 
-Repo containing my solutions to tasks for [Advent Of Code](https://adventofcode.com/)
-
-- [2022](./2022/README.md)
+- [2021](./2021)
+- [2022](./2022)
+- [2023](./2023)
