@@ -17,8 +17,11 @@ export const fetchDayInput = async ({
   year: number;
   day: number;
 }) => {
-  const file = readInputFromFile({ year, day });
+  const { file } = await readInputFromFile({ year, day });
+
   if (!file) {
+    console.log(`No input found locally, fetching from aoc..`);
+
     const url = `https://adventofcode.com/${year}/day/${day}/input`;
     const res = await fetch(url, {
       headers: {
@@ -66,5 +69,9 @@ const readInputFromFile = async ({
   year: number;
   day: number;
 }) => {
-  return await fs.readFile(`${year}/d${day}/input.txt`, "utf8");
+  try {
+    return { file: await fs.readFile(`${year}/d${day}/input.txt`, "utf8") };
+  } catch {
+    return { file: null };
+  }
 };
